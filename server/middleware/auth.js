@@ -1,7 +1,6 @@
 import jwt from "jsonwebtoken";
 
 //user wants to like a post
-//clicks like button => auth middleware  "says you're good to go" (NEXT) => like controller
 
 const secret = 'test';
 
@@ -18,7 +17,7 @@ const auth = async (req, res, next) => {
     const isCustomAuth = token.length < 500;
 
     let decodedData;
-    //token is our own
+
     if (token && isCustomAuth) { 
       //give us data from each token     
       decodedData = jwt.verify(token, secret);

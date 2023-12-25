@@ -53,21 +53,6 @@ const Navbar = () => {
         <img component={Link} to="/" src={memoriesText} alt="icon" height="45px" />
         <img className={classes.image} src={memoriesLogo} alt="icon" height="40px" />
       </Link>
-      {/* <div className={classes.brandContainer}>
-        <Typography
-        //pointing to home
-          component={Link}
-          to="/"
-          className={classes.heading}
-          color="primary"
-          variant="h2"
-          align="center"
-        >
-          Memories
-        </Typography>
-        <img className={classes.image} src={memories} alt="icon" height="60" />
-      </div> */}
-      {/* Toolbar */}
       <Toolbar className={classes.toolbar}>
         {user?.result ? (
           <div className={classes.profile}>

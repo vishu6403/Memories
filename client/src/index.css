@@ -1,8 +1,8 @@
 body {
-    background-color: #f7f8fc;
+    background-image: url('https://img.freepik.com/free-photo/abstract-marble-texture-black-white-grey-background-handmade-technique_1258-99671.jpg');
+    background-size: repeat; 
 }
 
 * {
-    /* font-family: 'Noto Sans JP' !important; */
     font-family: 'Heebo', sans-serif !important;
 }

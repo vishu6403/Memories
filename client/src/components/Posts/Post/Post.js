@@ -31,7 +31,7 @@ const Post = ({ post, setCurrentId }) => {
     if (post?.likes?.length > 0) {
       return post.likes.find((like) => like === (user?.result?.googleId || user?.result?._id))
         ? (
-          <><ThumbUpAltIcon fontSize="small" />&nbsp;{post.likes.length > 2 ? `You and ${post.likes.length - 1} others` : `${post.likes.length} like${post.likes.length > 1 ? 's' : ''}` }</>
+          <><ThumbUpAltIcon fontSize="small" />&nbsp;{post.likes.length > 2 ? `You and ${post.likes.length - 1} others` : `${post.likes.length} like${post.likes.length > 1 ? 's' : ''}`}</>
         ) : (
           <><ThumbUpAltOutlined fontSize="small" />&nbsp;{post.likes.length} {post.likes.length === 1 ? 'Like' : 'Likes'}</>
         );
@@ -60,18 +60,18 @@ const Post = ({ post, setCurrentId }) => {
           <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
         </div>
         {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
-        <div className={classes.overlay2} name="edit">
-          <Button
-            onClick={(e) => {
-              e.stopPropagation();
-              setCurrentId(post._id);
-            }}
-            style={{ color: 'white' }}
-            size="small"
-          >
-            <MoreHorizIcon fontSize="default" />
-          </Button>
-        </div>
+          <div className={classes.overlay2} name="edit">
+            <Button
+              onClick={(e) => {
+                e.stopPropagation();
+                setCurrentId(post._id);
+              }}
+              style={{ color: 'white' }}
+              size="small"
+            >
+              <MoreHorizIcon fontSize="default" />
+            </Button>
+          </div>
         )}
         <div className={classes.details}>
           <Typography variant="body2" color="textSecondary" component="h2">{post.tags.map((tag) => `#${tag} `)}</Typography>
